@@ -1,0 +1,43 @@
+{
+  "name": "moblove",
+  "version": "0.1.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+    "lint:eslint": "eslint .",
+    "format:eslint": "eslint --fix .",
+    "lint:prettier": "prettier --log-level warn --check './**/*.{ts,tsx,js,jsx,mjs,mts,vue}'",
+    "format:prettier": "prettier --log-level warn --write './**/*.{ts,tsx,js,jsx,mjs,mts,vue}'",
+    "lint": "pnpm run lint:prettier && pnpm run lint:eslint",
+    "format": "pnpm run format:prettier && pnpm run format:eslint",
+    "tauri": "tauri"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@tauri-apps/api": ">=2.0.0",
+    "@tauri-apps/plugin-shell": ">=2.0.0"
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-static": "^3.0.1",
+    "@sveltejs/kit": "^2.0.0",
+    "@sveltejs/vite-plugin-svelte": "4.0.0-next.7",
+    "@tailwindcss/vite": "4.0.0-alpha.26",
+    "@tauri-apps/cli": ">=2.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-svelte": "^2.44.1",
+    "prettier": "^3.3.3",
+    "prettier-plugin-svelte": "^3.2.7",
+    "prettier-plugin-tailwindcss": "^0.6.8",
+    "svelte": "5.0.0-next.262",
+    "svelte-check": "^4.0.0",
+    "tailwindcss": "4.0.0-alpha.26",
+    "tslib": "^2.7.0",
+    "typescript": "^5.6.0",
+    "vite": "^5.4.0"
+  }
+}
