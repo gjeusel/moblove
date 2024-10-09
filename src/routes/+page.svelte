@@ -4,7 +4,9 @@
   let name = $state("Boby")
   let greetMsg = $state("")
 
-  async function greet() {
+  async function greet(event: Event) {
+    event.preventDefault()
+
     // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
     greetMsg = await invoke("greet", { name })
   }
@@ -19,9 +21,9 @@
   />
   <h1 class="text-center text-lg font-normal">Mangas Chapters</h1>
 
-  <form class="flex items-center space-x-4 text-base font-medium" on:submit|preventDefault={greet}>
-    <input class="py-1 px-2" placeholder="Enter a name..." bind:value={name} />
-    <button class="rounded-md bg-cyan-700 py-1 px-2" type="submit">Greet</button>
+  <form class="flex items-center space-x-4 text-base font-medium" onsubmit={greet}>
+    <input type="text" class="px-2" placeholder="Enter a name..." bind:value={name} />
+    <button class="btn-cyan py-1 px-2" type="submit">Greet</button>
   </form>
   <p>{greetMsg}</p>
 </div>

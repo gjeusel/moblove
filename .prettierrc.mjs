@@ -6,6 +6,7 @@ export default {
   singleQuote: false,
   trailingComma: "all",
   arrowParens: "always",
+  // prettier-plugin-tailwindcss have to come last
   plugins: ["prettier-plugin-svelte", "prettier-plugin-tailwindcss"],
   overrides: [
     {

@@ -28,10 +28,16 @@
 
 @layer base {
   body {
-    @apply h-screen bg-white text-gray-200 dark:bg-gray-800;
+    @apply h-screen bg-white text-gray-900 dark:bg-gray-800 dark:text-gray-200;
   }
 
-  input {
-    @apply rounded-md border border-transparent bg-gray-100 dark:bg-gray-700;
+  input[type="text"],
+  input[type="password"],
+  input[type="email"] {
+    @apply rounded-md border-0 bg-gray-100 py-1.5 text-gray-900 ring-1 shadow-sm ring-gray-300 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-cyan-600 focus:outline-none focus:ring-inset sm:text-sm sm:leading-6 dark:bg-gray-700;
+  }
+
+  .btn-cyan {
+    @apply rounded-md bg-cyan-700 text-gray-200 dark:bg-cyan-300 dark:text-gray-900;
   }
 }
