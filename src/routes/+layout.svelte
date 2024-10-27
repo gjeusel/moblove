@@ -1,11 +1,13 @@
 <script lang="ts">
-  import { BookText, Gamepad, FlaskConical, House } from "lucide-svelte"
+  import { BookText, Gamepad, House } from "lucide-svelte"
 </script>
 
-<slot></slot>
+<div class="pb-[4.5rem]">
+  <slot></slot>
+</div>
 
 <div
-  class="fixed right-0 bottom-0 left-0 flex justify-around border-t border-gray-300 py-3 dark:border-gray-700"
+  class="fixed right-0 bottom-0 left-0 flex justify-around border-t border-gray-300 bg-white py-3 dark:border-gray-700 dark:bg-gray-800"
 >
   <a href="/" class="">
     <House class="size-8" />

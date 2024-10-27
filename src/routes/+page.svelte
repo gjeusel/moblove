@@ -1,3 +1,7 @@
+<script lang="ts">
+  import { Button } from "$lib/components/ui/button"
+</script>
+
 <div class="flex flex-col items-center">
   <img
     src="/icon.png"
@@ -6,4 +10,5 @@
     alt="MobLove"
   />
   <p>Hi there, how can I help you today?</p>
+  <Button on:click={() => console.log("HELLO THERE")}>Click me</Button>
 </div>

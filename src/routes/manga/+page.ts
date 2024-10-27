@@ -19,6 +19,6 @@ export const load: PageLoad = async () => {
   if (!response.ok) {
     throw new Error(`HTTP error! status: ${response.status}`)
   }
-  const mangas = (await response.json()).reverse()
+  const mangas = await response.json()
   return { mangas: mangas as Manga[] }
 }
