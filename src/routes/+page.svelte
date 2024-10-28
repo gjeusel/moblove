@@ -10,5 +10,5 @@
     alt="MobLove"
   />
   <p>Hi there, how can I help you today?</p>
-  <Button on:click={() => console.log("HELLO THERE")}>Click me</Button>
+  <Button onclick={() => console.log("HELLO THERE")}>Click me</Button>
 </div>

@@ -13,9 +13,17 @@
       "allow": [
         {
           "url": "https://messy.s3.fr-par.scw.cloud"
+        },
+        {
+          "url": "https://cdn.readdetectiveconan.com/*"
+        },
+        {
+          "url": "https://mangapill.com/*"
         }
       ]
-    }
+    },
+    "log:default",
+    "fs:default"
   ]
 }
 

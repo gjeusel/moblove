@@ -1,5 +1,11 @@
 <script lang="ts">
   import { BookText, Gamepad, House } from "lucide-svelte"
+
+  // import { warn, info, error } from "@tauri-apps/plugin-log"
+
+  // console.info = info
+  // console.warn = warn
+  // console.error = error
 </script>
 
 <div class="pb-[4.5rem]">
