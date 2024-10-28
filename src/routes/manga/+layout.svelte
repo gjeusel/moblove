@@ -1,4 +1,7 @@
 <script lang="ts">
+  import { fade } from "svelte/transition"
+  import { cubicIn, cubicOut } from "svelte/easing"
+
   import * as Breadcrumb from "$lib/components/ui/breadcrumb/index.js"
 </script>
 
@@ -20,4 +23,9 @@
   </Breadcrumb.List>
 </Breadcrumb.Root>
 
-<slot></slot>
+<div
+  in:fade={{ easing: cubicOut, duration: 100, delay: 100 }}
+  out:fade={{ easing: cubicIn, duration: 200 }}
+>
+  <slot></slot>
+</div>

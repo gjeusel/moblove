@@ -4,8 +4,18 @@
   let { data }: { data: PageData } = $props()
 </script>
 
-<div class="flex flex-col">
-  {#each data.images as img_data}
-    <img src={img_data} alt="manga img" />
-  {/each}
-</div>
+{#await data.images}
+  <div class="flex flex-col gap-y-4">
+    <div class="h-80 w-full animate-pulse bg-gray-200"></div>
+    <div class="h-80 w-full animate-pulse bg-gray-200"></div>
+    <div class="h-80 w-full animate-pulse bg-gray-200"></div>
+  </div>
+{:then images}
+  <div class="flex flex-col">
+    {#each images as img_data, i}
+      <img src={img_data} alt={`img-${i}`} />
+    {/each}
+  </div>
+{:catch error}
+  <p>Something went wrong: {error.message}</p>
+{/await}
