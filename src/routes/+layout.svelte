@@ -70,7 +70,7 @@
     <a href="/" class="">
       <House class="size-8" />
     </a>
-    <a href="/manga" class="">
+    <a href="/mangas" class="">
       <BookText class="size-8" />
     </a>
     <a href="/timesup" class="">

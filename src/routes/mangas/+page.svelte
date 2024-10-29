@@ -12,7 +12,7 @@
           {#each manga.chapters.slice(manga.chapters.length - 4, manga.chapters.length) as chapt}
             <a
               aria-label={`${manga.name} - ${chapt.url}`}
-              href={`/manga/${manga.name}?url=${chapt.url}`}
+              href={`/mangas/chapter?url=${chapt.url}`}
               class="rounded-lg bg-gray-100 px-2 py-1.5 dark:bg-gray-700"
             >
               {chapt.num}
