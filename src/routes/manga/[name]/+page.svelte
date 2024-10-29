@@ -6,9 +6,9 @@
 
 {#await data.images}
   <div class="flex flex-col gap-y-4">
-    <div class="h-80 w-full animate-pulse bg-gray-200"></div>
-    <div class="h-80 w-full animate-pulse bg-gray-200"></div>
-    <div class="h-80 w-full animate-pulse bg-gray-200"></div>
+    <div class="h-80 w-full animate-pulse bg-gray-200 dark:bg-gray-700"></div>
+    <div class="h-80 w-full animate-pulse bg-gray-200 dark:bg-gray-700"></div>
+    <div class="h-80 w-full animate-pulse bg-gray-200 dark:bg-gray-700"></div>
   </div>
 {:then images}
   <div class="flex flex-col">
